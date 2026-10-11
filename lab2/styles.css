@@ -1,0 +1,73 @@
+body {
+    font-family: Seenonim;
+    background-color: #AEC1CF;
+    color: #000000;
+    padding: 20px;
+}
+
+h1 {
+    font-family: Zvezda NHZDN;
+    color: #25398F;
+}
+
+h2 {
+    font-family: Zvezda NHZDN;
+    color: #25398F;
+}
+
+l {
+    font-family: Zvezda NHZDN;
+    color: #25398F;
+}
+
+a {
+    font-family: Seenonim;
+    color: #25398F;
+}
+
+.nav-link {
+    font-family: Zvezda NHZDN; 
+    color: #25398F;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #0029ED;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.separator {
+    color: #25398F;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px;
+}
+
+.menu {
+    background-color: #6E67C9;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.character {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #6E67C9;
+}
+
+#header {
+    padding: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
