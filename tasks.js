@@ -29,7 +29,8 @@ function recSumTo(n) {
 
 // функция, считающая факториал заданного числа
 function factorial(n) {
-    if (n <= 1) return 1;
+    if (n === 1) return 1;
+    if (n < 0) return undefined;
     return n * factorial(n-1);
 }
 
@@ -44,7 +45,8 @@ function isBinary(n) {
 
 // функция, которая находит N-е число Фибоначчи
 function fibonacci(n) {
-    if (n <= 1) return n;
+    if (n < 0) return undefined;
+    if (n === 0) return 1;
     let a = 0, b = 1;
     for (let i = 2; i <= n; i++) {
         let next = a + b;
@@ -90,28 +92,26 @@ function getOperationFn(initialValue, operatorFn) {
  (такие как Date, RegExp и т.п.) не обязательно **/
 
 function deepEqual(firstObject, secondObject) {
-     if (firstObject === secondObject) {
+    if (Number.isNaN(firstObject) && Number.isNaN(secondObject)) {
         return true;
     }
-    
+    if (firstObject === secondObject) {
+        return true;
+    }
     if (typeof firstObject !== 'object' || firstObject === null ||
         typeof secondObject !== 'object' || secondObject === null) {
         return false;
     }
-    
     const keys1 = Object.keys(firstObject);
     const keys2 = Object.keys(secondObject);
-    
     if (keys1.length !== keys2.length) {
         return false;
     }
-    
     for (let key of keys1) {
         if (!keys2.includes(key) || !deepEqual(firstObject[key], secondObject[key])) {
             return false;
         }
     }
-
     return true;
 }
 
