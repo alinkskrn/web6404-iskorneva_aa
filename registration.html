@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Sonic - Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Регистрация игрока</h1>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html" class="menu__link">Главная</a>
+        <span class="menu__separator"> | </span>
+        <a href="characters.html" class="menu__link">Персонажи</a>
+        <span class="menu__separator"> | </span>
+        <a href="games.html" class="menu__link">Игры</a>
+        <span class="menu__separator"> | </span>
+        <a href="registration.html" class="menu__link">Регистрация</a>
+    </nav>
+
+    <form class="form" id="playerForm">
+        <h2 class="form__title">Стать игроком вселенной Sonic</h2>
+
+        <div class="form__group">
+            <label class="form__label" for="login">Логин игрока:</label>
+            <input type="text" id="login" class="form__input" placeholder="Например, SonicFan91" required>
+        </div>
+
+        <div class="form__group">
+            <label class="form__label" for="password">Пароль:</label>
+            <input type="password" id="password" class="form__input" placeholder="Минимум 6 символов" minlength="6" required>
+        </div>
+
+        <div class="form__group form__checkbox-group">
+            <input type="checkbox" id="agree" required>
+            <label for="agree">Согласен на обработку данных</label>
+        </div>
+
+        <button type="submit" class="form__btn form__btn--animated">Отправить на сервер</button>
+    </form>
+
+    <script src="scripts/player.js"></script>
+    <script src="scripts/form.js"></script>
+</body>
+</html>
